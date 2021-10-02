@@ -1,0 +1,230 @@
+    body {
+        margin: 0;
+    }
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    * {
+        font-family: Depixel;
+        color: white;
+        text-shadow: 2px 2px 1px #000;
+        box-sizing: border-box;
+    }
+    
+    .gameBoard div {
+        background-color: skyblue;
+    }
+    
+    @font-face {
+        font-family: Depixel;
+        src: url(./fonts/depixelbreit.otf);
+    }
+    
+    .mainMenu {
+        width: 100vw;
+        height: 100vh;
+        background: no-repeat center center/cover url(./img/minecraft-wallpaper-whatspaper-11.jpg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    input {
+        background-color: #6E6E6E;
+        color: #fff;
+        padding: 2px 50px;
+        margin: 10px;
+        box-shadow: black 0 0 5px 2px;
+        font-family: Depixel;
+        text-shadow: 2px 2px 1px #000;
+    }
+    
+    input:hover {
+        cursor: pointer;
+        border: black solid 2px;
+        border-bottom: solid 2px #a3a3a3;
+        border-right: solid 2px #a3a3a3;
+    }
+    
+    .sidebar {
+        background-color: #6E6E6E;
+        height: 100vh;
+        width: 10vw;
+        border-top: inset;
+        box-shadow: inset #a3a3a3 -2px -2px 1px 1px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .sidebar input {
+        padding: 0;
+    }
+    
+    .gameBoard {
+        margin-left: 10vw;
+        background-color: skyblue;
+        display: grid;
+        grid-template-rows: repeat(20, 5vh);
+    }
+    
+    .displaynone {
+        display: none;
+    }
+    
+    .displayblock {
+        display: block;
+    }
+    
+    .cloud {
+        background: no-repeat center center/cover url(./img/cloud.png);
+    }
+    
+    .dirt {
+        background: no-repeat center center/cover url(./img/dirt.jpg);
+    }
+    
+    .lava {
+        background: no-repeat center center/cover url(./img/Lava.jpg);
+    }
+    
+    .water {
+        background: no-repeat center center/cover url(./img/Water.jpg);
+    }
+    
+    .grass {
+        background: no-repeat center center/cover url(./img/grass.jpg);
+    }
+    
+    .tree {
+        background: no-repeat center center/cover url(./img/tree.png);
+    }
+    
+    .leaf {
+        background: no-repeat center center/cover url(./img/leaf.jpg);
+    }
+    
+    .stone {
+        background: no-repeat center center/cover url(./img/Stone.jpg);
+    }
+    
+    .enderMan {
+        background: no-repeat center center/cover url(./img/Enderman-Head.jpg);
+    }
+    
+    .eye {
+        background: no-repeat center center/cover url(./img/eye.png);
+    }
+    
+    .fullEye {
+        background: no-repeat center center/cover url(./img/ender-eye.jpg);
+    }
+    
+    .obsidian {
+        background: no-repeat center center/cover url(./img/obsidianPurple.jpg);
+    }
+    
+    .tnt {
+        cursor: pointer;
+        margin: 1px;
+        border: 2px solid darkgoldenrod;
+        box-shadow: black 0 0 3px 1px;
+        height: 10%;
+        width: 100%;
+        background: no-repeat center center/cover url(./img/TNT.jpg);
+    }
+    
+    .portal {
+        background: no-repeat center center/cover url(./img/portal.png);
+    }
+    
+    .gameBoard div:hover {
+        box-shadow: inset blanchedalmond 0 0 2px 2px;
+    }
+    
+    .allTools {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: space-around
+    }
+    
+    .tools {
+        width: 40%;
+        height: 90%;
+    }
+    
+    .tools div:hover {
+        transform: scale(1.1);
+    }
+    
+    .pickaxe {
+        cursor: pointer;
+        margin: 1px;
+        border: 2px solid darkgoldenrod;
+        box-shadow: black 0 0 3px 1px;
+        height: 10%;
+        width: 100%;
+        background: no-repeat center center/cover url(./img/pickaxe.png);
+    }
+    
+    .shovel {
+        cursor: pointer;
+        margin: 1px;
+        border: 2px solid darkgoldenrod;
+        box-shadow: black 0 0 3px 1px;
+        height: 10%;
+        width: 100%;
+        background: no-repeat center center/cover url(./img/shovel.png);
+    }
+    
+    .axe {
+        cursor: pointer;
+        margin: 1px;
+        border: 2px solid darkgoldenrod;
+        box-shadow: black 0 0 3px 1px;
+        height: 10%;
+        width: 100%;
+        background: no-repeat center center/cover url(./img/axe.jpg);
+    }
+    
+    .sword {
+        cursor: pointer;
+        margin: 1px;
+        border: 2px solid darkgoldenrod;
+        box-shadow: black 0 0 3px 1px;
+        height: 10%;
+        width: 100%;
+        background: no-repeat center center/cover url(./img/sword.png);
+    }
+    
+    .bucket {
+        cursor: pointer;
+        margin: 1px;
+        border: 2px solid darkgoldenrod;
+        box-shadow: black 0 0 3px 1px;
+        height: 10%;
+        width: 100%;
+        background: no-repeat center center/cover url(./img/bucket.png);
+    }
+    
+    .items {
+        width: 40%;
+        height: 90%;
+    }
+    
+    .items div {
+        cursor: pointer;
+        margin: 1px;
+        border: 2px solid darkgoldenrod;
+        box-shadow: black 0 0 3px 1px;
+        height: 10%;
+        width: 100%;
+    }
+    
+    .items div:hover {
+        filter: brightness(1.5);
+    }
