@@ -33,12 +33,9 @@
     
     input {
         background-color: #6E6E6E;
-        color: #fff;
         padding: 2px 50px;
         margin: 10px;
         box-shadow: black 0 0 5px 2px;
-        font-family: Depixel;
-        text-shadow: 2px 2px 1px #000;
     }
     
     input:hover {
@@ -127,16 +124,6 @@
         background: no-repeat center center/cover url(./img/obsidianPurple.jpg);
     }
     
-    .tnt {
-        cursor: pointer;
-        margin: 1px;
-        border: 2px solid darkgoldenrod;
-        box-shadow: black 0 0 3px 1px;
-        height: 10%;
-        width: 100%;
-        background: no-repeat center center/cover url(./img/TNT.jpg);
-    }
-    
     .portal {
         background: no-repeat center center/cover url(./img/portal.png);
     }
@@ -161,53 +148,36 @@
         transform: scale(1.1);
     }
     
-    .pickaxe {
+    .tools div {
         cursor: pointer;
         margin: 1px;
         border: 2px solid darkgoldenrod;
         box-shadow: black 0 0 3px 1px;
         height: 10%;
         width: 100%;
+    }
+    
+    .tnt {
+        background: no-repeat center center/cover url(./img/TNT.jpg);
+    }
+    
+    .pickaxe {
         background: no-repeat center center/cover url(./img/pickaxe.png);
     }
     
     .shovel {
-        cursor: pointer;
-        margin: 1px;
-        border: 2px solid darkgoldenrod;
-        box-shadow: black 0 0 3px 1px;
-        height: 10%;
-        width: 100%;
         background: no-repeat center center/cover url(./img/shovel.png);
     }
     
     .axe {
-        cursor: pointer;
-        margin: 1px;
-        border: 2px solid darkgoldenrod;
-        box-shadow: black 0 0 3px 1px;
-        height: 10%;
-        width: 100%;
         background: no-repeat center center/cover url(./img/axe.jpg);
     }
     
     .sword {
-        cursor: pointer;
-        margin: 1px;
-        border: 2px solid darkgoldenrod;
-        box-shadow: black 0 0 3px 1px;
-        height: 10%;
-        width: 100%;
         background: no-repeat center center/cover url(./img/sword.png);
     }
     
     .bucket {
-        cursor: pointer;
-        margin: 1px;
-        border: 2px solid darkgoldenrod;
-        box-shadow: black 0 0 3px 1px;
-        height: 10%;
-        width: 100%;
         background: no-repeat center center/cover url(./img/bucket.png);
     }
     
