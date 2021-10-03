@@ -20,7 +20,6 @@ let mainContainer = document.querySelector('.mainContainer'),
     bucket = document.querySelector('.tools .bucket'),
     toolBank, itemBank,
     arrayOfKnowledge = [];
-
 btn[0].addEventListener('click', () => {
     gameBoard.classList.remove('displaynone');
     sideBar.classList.remove('displaynone');
@@ -205,6 +204,7 @@ function gridGenerator(width) {
             }
         }
     }
+    tnt.addEventListener('click', toolBankFiller)
     axe.addEventListener('click', toolBankFiller)
     sword.addEventListener('click', toolBankFiller)
     shovel.addEventListener('click', toolBankFiller)
@@ -218,7 +218,7 @@ function gridGenerator(width) {
     waterBank.addEventListener('click', obsidianBanker)
     stoneBank.addEventListener('click', itemBankFiller)
     fullEyeBank.addEventListener('click', itemBankFiller)
-    obsidianBank.addEventListener('click', itemBankFiller)
+    obsidianBank.addEventListener('click', toolBankFiller)
 
     function itemBankFiller(e) {
         itemBank = e.target.className;
@@ -246,6 +246,7 @@ function gridGenerator(width) {
 
 function checkMove(e) {
     let tempDivClass = e.path[0].classList[0]
+    if (toolBank == 'tnt') { TNT(e) }
     switch (tempDivClass) {
         case undefined:
             switch (itemBank) {
@@ -289,7 +290,7 @@ function checkMove(e) {
                     if (obsidianBank.innerHTML > 0) {
                         obsidianBank.innerHTML--;
                         e.path[0].classList.add('obsidian')
-                        checksiblings(e)
+                            // checksiblings(e)
                     }
                     break;
             }
@@ -344,14 +345,22 @@ function checkMove(e) {
             break;
     }
 
-    // function checksiblings(e) {
-    //     arrayOfKnowledge.push({ x: e.path[0].style.gridRowStart, y: e.path[0].style.gridColumnStart })
-    //     let fBX = arrayOfKnowledge[0].x
-    //     let fBY = arrayOfKnowledge[0].y
-    //     console.log(fBY);
-    //     if (arrayOfKnowledge.length > 9) {
-    //         if (arrayOfKnowledge.includes({ x: fBX, y: fBY }) && arrayOfKnowledge.includes({ x: fBX, y: fBY + 1 }) || arrayOfKnowledge.includes({ x: fBX, y: fBY }) && arrayOfKnowledge.includes({ x: fBX, y: fBY - 1 })) {}
-    //     }
-    //     console.log(arrayOfKnowledge);
-    // }
+    function TNT(e) {
+        console.log(e.path[0].style.gridRowStart);
+        e.path[0].classList.remove('dirt', 'water', 'tree', 'leaf', 'lava', 'stone', 'grass')
+        gameBoard.children[Array.from(gameBoard.children).indexOf(e.path[0]) + 1].classList.remove('dirt', 'water', 'tree', 'leaf', 'lava', 'stone', 'grass')
+        gameBoard.children[Array.from(gameBoard.children).indexOf(e.path[0]) - 1].classList.remove('dirt', 'water', 'tree', 'leaf', 'lava', 'stone', 'grass')
+    }
+
+    function checksiblings(e) {
+        //     arrayOfKnowledge.push({ x: e.path[0].style.gridRowStart, y: e.path[0].style.gridColumnStart })
+        //     let fBX = arrayOfKnowledge[0].x
+        //     let fBY = arrayOfKnowledge[0].y
+        //     console.log(fBY);
+        //     if (arrayOfKnowledge.length > 9) {
+        //         if (arrayOfKnowledge.includes({ x: fBX, y: fBY }) && arrayOfKnowledge.includes({ x: fBX, y: fBY + 1 }) || arrayOfKnowledge.includes({ x: fBX, y: fBY }) && arrayOfKnowledge.includes({ x: fBX, y: fBY - 1 })) {}
+        //     }
+        //     console.log(arrayOfKnowledge);
+    }
+
 }
